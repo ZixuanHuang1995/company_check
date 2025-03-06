@@ -1,13 +1,6 @@
 document.getElementById('checkForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const companyID = document.getElementById('companyID').value;
-
-    
-    const resultDiv = document.getElementById('result');
-    resultDiv.textContent = 'test1';
-    resultDiv.className = 'test2';
-
-    
     checkCompanyID(companyID);
 });
 
@@ -19,7 +12,7 @@ function checkCompanyID(companyID) {
     resultDiv.textContent = 'test1';
     resultDiv.className = 'test2';
 
-    
+    /*
     fetch(url)
         .then(response => {
             if (response.status === 200) {
@@ -29,14 +22,6 @@ function checkCompanyID(companyID) {
             }
         })
         .then(data => {
-
-            
-            resultDiv = document.getElementById('result');
-            resultDiv.textContent = data;
-            resultDiv.className = 'test3';
-
-            
-            /*
             resultDiv = document.getElementById('result');
             if (data.length > 0) {
                 resultDiv.textContent = '公司統編有效';
@@ -45,11 +30,12 @@ function checkCompanyID(companyID) {
                 resultDiv.textContent = '公司統編無效';
                 resultDiv.className = 'invalid';
             }
-            */
         })
         .catch(error => {
             const resultDiv = document.getElementById('result');
             resultDiv.textContent = error.message;
             resultDiv.className = 'invalid';
         });
+
+        */
 }
