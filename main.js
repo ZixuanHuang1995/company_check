@@ -16,6 +16,11 @@ function checkCompanyID(companyID) {
             }
         })
         .then(data => {
+
+            resultDiv.textContent = data;
+            resultDiv.className = 'valid';
+            
+            /*
             const resultDiv = document.getElementById('result');
             if (data.length > 0) {
                 resultDiv.textContent = '公司統編有效';
@@ -24,6 +29,7 @@ function checkCompanyID(companyID) {
                 resultDiv.textContent = '公司統編無效';
                 resultDiv.className = 'invalid';
             }
+            */
         })
         .catch(error => {
             const resultDiv = document.getElementById('result');
