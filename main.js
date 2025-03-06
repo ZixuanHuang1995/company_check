@@ -1,6 +1,13 @@
 document.getElementById('checkForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const companyID = document.getElementById('companyID').value;
+
+    
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = 'test1';
+    resultDiv.className = 'test2';
+
+    
     checkCompanyID(companyID);
 });
 
