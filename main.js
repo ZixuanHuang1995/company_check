@@ -6,6 +6,12 @@ document.getElementById('checkForm').addEventListener('submit', function(event) 
 
 function checkCompanyID(companyID) {
     const url = `https://data.gcis.nat.gov.tw/od/data/api/5F64D864-61CB-4D0D-8AD9-492047CC1EA6?$format=json&$filter=Business_Accounting_NO eq ${companyID}`;
+
+    
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = 'test1';
+    resultDiv.className = 'test2';
+
     
     fetch(url)
         .then(response => {
@@ -16,14 +22,23 @@ function checkCompanyID(companyID) {
             }
         })
         .then(data => {
-            const resultDiv = document.getElementById('result');
+
+            
+            resultDiv = document.getElementById('result');
+            resultDiv.textContent = data;
+            resultDiv.className = 'test3';
+
+            
+            /*
+            resultDiv = document.getElementById('result');
             if (data.length > 0) {
-                resultDiv.textContent = '公司統編有效1';
-                resultDiv.className = 'valid1';
+                resultDiv.textContent = '公司統編有效';
+                resultDiv.className = 'valid';
             } else {
-                resultDiv.textContent = '公司統編無效2';
-                resultDiv.className = 'invalid2';
+                resultDiv.textContent = '公司統編無效';
+                resultDiv.className = 'invalid';
             }
+            */
         })
         .catch(error => {
             const resultDiv = document.getElementById('result');
