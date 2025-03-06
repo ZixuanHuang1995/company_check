@@ -16,20 +16,14 @@ function checkCompanyID(companyID) {
             }
         })
         .then(data => {
-
-            resultDiv.textContent = 'valid111';
-            resultDiv.className = 'valid';
-            
-            /*
             const resultDiv = document.getElementById('result');
             if (data.length > 0) {
-                resultDiv.textContent = '公司統編有效';
-                resultDiv.className = 'valid';
+                resultDiv.textContent = '公司統編有效1';
+                resultDiv.className = 'valid1';
             } else {
-                resultDiv.textContent = '公司統編無效';
-                resultDiv.className = 'invalid';
+                resultDiv.textContent = '公司統編無效2';
+                resultDiv.className = 'invalid2';
             }
-            */
         })
         .catch(error => {
             const resultDiv = document.getElementById('result');
