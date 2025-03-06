@@ -17,7 +17,7 @@ function checkCompanyID(companyID) {
         })
         .then(data => {
 
-            resultDiv.textContent = data;
+            resultDiv.textContent = 'valid111';
             resultDiv.className = 'valid';
             
             /*
