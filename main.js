@@ -5,12 +5,12 @@ document.getElementById('checkForm').addEventListener('submit', function(event) 
 });
 
 function checkCompanyID(companyID) {
-    const url = `https://data.gcis.nat.gov.tw/od/data/api/5F64D864-61CB-4D0D-8AD9-492047CC1EA6?$format=json&$filter=Business_Accounting_NO eq ${companyID}`;
+    //const url = `https://data.gcis.nat.gov.tw/od/data/api/5F64D864-61CB-4D0D-8AD9-492047CC1EA6?$format=json&$filter=Business_Accounting_NO eq ${companyID}`;
 
     
     const resultDiv = document.getElementById('result');
-    resultDiv.textContent = 'test1';
-    resultDiv.className = 'test2';
+    resultDiv.textContent = 'test12';
+    resultDiv.className = 'test23';
 
     /*
     fetch(url)
